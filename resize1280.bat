@@ -1,7 +1,7 @@
 @echo off
 SETLOCAL EnableDelayedExpansion
 
-echo                   			Unique JPG Maker
+echo                   Batch Image Resizer to 1280 MAX
 echo    _            __     __  _ _             __          __  _     
 echo   ^| ^|           \ \   / / ^| ^| ^|            \ \        / / ^| ^|    
 echo   ^| ^|__  _   _   \ \_/ /__^| ^| ^| _____      _\ \  /\  / /__^| ^|__  
@@ -16,14 +16,10 @@ echo Bitcoin: bc1qqv99jasckntqnk0pkjnrjtpwu0yurm0qd0gnqv
 echo Ethereum: 0xBC118D3FDE78eE393A154C29A4545c575506ad6B
 echo USDT TRC20: TKeNEVndhPSKXuYmpEwF4fVtWUvfCnWmra
 echo. 
-IF "%1"=="" (
-	echo "Uniqueize whole JPG directory..."
-	FOR /F "tokens=*" %%G IN ('dir /b *.jpg,*.jpeg') DO (
-		nconvert -out png -o "%%~nG_ywb.jpg" -q 95 -rmeta -rexifthumb -noise uniform 0.!random! "%%G"
-	)
-	echo "Jpg dir uniqueization complete!"
-) ELSE (
-	echo "Uniqueize single JPG file..."
-	nconvert -out jpeg -o "%~n1_ywb.jpg -q 95 -rmeta -rexifthumb -noise uniform 0.1 "%1"
-	echo "Uniqueization complete!"
-)
+echo Resizing JPG files...
+magick mogrify -resize "1280x1280>" *.jpg
+echo Resizing JPEG files...
+magick mogrify -resize "1280x1280>" *.jpeg
+echo Resizing PNG files...
+magick mogrify -resize "1280x1280>" *.png
+echo All DONE! Happy hacking.
