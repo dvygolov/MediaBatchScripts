@@ -1,9 +1,25 @@
+```                
+                    Bat Files for Media Processing
+    _            __     __  _ _             __          __  _     
+   | |           \ \   / / | | |            \ \        / / | |    
+   | |__  _   _   \ \_/ /__| | | _____      _\ \  /\  / /__| |__  
+   | '_ \| | | |   \   / _ \ | |/ _ \ \ /\ / /\ \/  \/ / _ \ '_ \ 
+   | |_) | |_| |    | |  __/ | | (_) \ V  V /  \  /\  /  __/ |_) |
+   |_.__/ \__, |    |_|\___|_|_|\___/ \_/\_/    \/  \/ \___|_.__/ 
+           __/ |                                                  
+          |___/             https://yellowweb.top                 
+
+If you like these scripts, PLEASE DONATE!  
+USDT TRC20: TKeNEVndhPSKXuYmpEwF4fVtWUvfCnWmra
+Bitcoin: bc1qqv99jasckntqnk0pkjnrjtpwu0yurm0qd0gnqv  
+Ethereum: 0xBC118D3FDE78eE393A154C29A4545c575506ad6B  
+```
 # MediaBatchScripts
 
 Here are some scripts that may help you in your day to day work with landings and creatives.
 These scripts work only on Windows systems and can compress, convert or make unique various media files, including:
 
-- jpg,jpeg
+- jpg/jpeg
 - png
 - gif
 - mp4
@@ -16,6 +32,7 @@ You will need to download and unpack/install somewhere this free software:
 - [MozJPEG](https://github.com/mozilla/mozjpeg/releases)
 - [PNGQuant](https://pngquant.org/)
 - [NConvert](https://www.xnview.com/en/nconvert/)
+- [ImageMagick](https://www.xnview.com/en/nconvert/)
 
 After you are done, place the paths to these software pieces (to their main EXE files) right to you PATH Environment Variable.
 So that you can use them from the command line. If you don't know, how to edit your PATH Environment Variable and add there new
