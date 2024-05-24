@@ -63,11 +63,9 @@ These scripts can be used to compress one or more media-files.
 ### Gif To Video Conversion
 
 - gif2mp4.bat
-- gif2mp4c.bat
 - gif2webm.bat
 
 If you don't know - GIF is EVIL! It weighs A LOT, video is much-much better. So use these scripts to convert your GIF-files to MP4 or to WebM formats.
-Why are there two scripts for MP4? Cause sometimes the first one doesn't work well. In that case use the second one. Easy!
 
 ### Make Unique Files
 
