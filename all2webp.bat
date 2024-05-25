@@ -1,7 +1,7 @@
 @echo off
 SETLOCAL EnableDelayedExpansion
 
-echo                   				JPG Size Compressor
+echo                   			PNG,JPG to WebP Converter
 echo    _            __     __  _ _             __          __  _     
 echo   ^| ^|           \ \   / / ^| ^| ^|            \ \        / / ^| ^|    
 echo   ^| ^|__  _   _   \ \_/ /__^| ^| ^| _____      _\ \  /\  / /__^| ^|__  
@@ -16,20 +16,14 @@ echo Bitcoin: bc1qqv99jasckntqnk0pkjnrjtpwu0yurm0qd0gnqv
 echo Ethereum: 0xBC118D3FDE78eE393A154C29A4545c575506ad6B
 echo USDT TRC20: TKeNEVndhPSKXuYmpEwF4fVtWUvfCnWmra
 echo. 
-
 IF "%1"=="" (
-	echo "Compressing whole JPG directory..."
-	FOR /F "tokens=*" %%G IN ('dir /b /S *.jpg,*.jpeg') DO (
-			echo "Compressing %%G"
-			cjpeg -quality 70 -outfile "%%G_new" "%%G"
-			del "%%G"
-			ren "%%G_new" "%%~nxG"
+	echo "Converting to WebP whole directory..."
+	FOR /F "tokens=*" %%G IN ('dir /b *.png,*.jpg,*.jpeg') DO (
+		nconvert -out webp -o "%%~nG_ywb.webp" -q 95 -rmeta -rexifthumb "%%G"
 	)
-	echo "Dir compression complete!"
+	echo "Dir to WebP conversion complete!"
 ) ELSE (
-	echo "Compressing single JPG file..."
-	cjpeg -quality 70 -outfile "%1_new" "%1"
-	del "%1"
-	ren "%1_new" "%~nx1"
-	echo "Single compression complete!"
+	echo "Converting single file..."
+	nconvert -out webp -o "%~n1_ywb.png -q 95 -rmeta -rexifthumb "%1"
+	echo "Conversion to WebP complete!"
 )
